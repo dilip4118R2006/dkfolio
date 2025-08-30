@@ -1,12 +1,16 @@
 /* Certifications Section */
 
 .certifications-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
     justify-content: center;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .certifications-container {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
 }
 
 .cert-header {
@@ -73,4 +77,20 @@
 
 .view-button:hover {
     background-color: #0077cc;
+}
+
+/* Mobile specific improvements */
+@media (max-width: 767px) {
+    .cert-header {
+        gap: 10px;
+    }
+    
+    .details-content {
+        padding: 15px 0;
+    }
+    
+    .details-content p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
 }

@@ -1,13 +1,13 @@
 /* Skills Section */
 
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-}
-
 .skill-category {
     overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .skill-category {
+        margin-bottom: 1rem;
+    }
 }
 
 .skills-header {
@@ -52,4 +52,23 @@
     position: relative;
     width: 0;
     transition: width 1s ease-in-out;
+}
+
+/* Mobile specific improvements */
+@media (max-width: 767px) {
+    .skills-header {
+        margin-bottom: 1rem;
+    }
+    
+    .skill-item {
+        margin-bottom: 1rem;
+    }
+    
+    .skill-info {
+        font-size: 0.9rem;
+    }
+    
+    .skill-bar {
+        height: 6px;
+    }
 }

@@ -23,8 +23,14 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-    transform: scale(0.8);
+    padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 2rem;
+        transform: scale(0.8);
+    }
 }
 
 section {
@@ -34,6 +40,13 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
+}
+
+@media (max-width: 767px) {
+    section {
+        min-height: auto;
+        padding: 3rem 0 4rem;
+    }
 }
 
 section.active {
@@ -49,4 +62,10 @@ section.active {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .spline-background {
+        display: none;
+    }
 }

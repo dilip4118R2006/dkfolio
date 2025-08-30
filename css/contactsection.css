@@ -37,6 +37,15 @@
     margin-left: 1.5rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .contact-links {
+        margin-top: 2rem;
+        margin-left: 0;
+        justify-content: center;
+    }
 }
 
 .social-link {
@@ -114,4 +123,25 @@ textarea.form-control {
     background-color: rgba(255, 95, 86, 0.1);
     color: #ff5f56;
     border: 1px solid rgba(255, 95, 86, 0.2);
+}
+
+/* Mobile specific improvements */
+@media (max-width: 767px) {
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .contact-icon {
+        margin: 0 auto 0.5rem auto;
+    }
+    
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
 }

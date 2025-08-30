@@ -1,10 +1,14 @@
 /* Responsive Styles */
 
+/* Base mobile-first approach */
+* {
+    box-sizing: border-box;
+}
 
 /* Container responsiveness */
-
 .container {
     padding: 0 1rem;
+    max-width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -22,340 +26,813 @@
 @media (min-width: 992px) {
     .container {
         padding: 0 2rem;
+        transform: scale(0.8);
     }
 }
 
-
 /* Section padding adjustments */
-
 section {
-    padding: 4rem 0 6rem;
+    padding: 3rem 0 4rem;
+    min-height: auto;
 }
 
 @media (min-width: 768px) {
     section {
         padding: 6rem 0 8rem;
+        min-height: 100vh;
     }
 }
 
-
 /* Typography responsiveness */
-
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 @media (min-width: 576px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
     }
 }
 
 @media (min-width: 768px) {
     h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
         font-size: 3rem;
     }
     h2 {
         font-size: 2.5rem;
     }
+    h3 {
+        font-size: 1.8rem;
+    }
 }
-
 
 /* Grid system improvements */
+.certifications-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+}
 
-@media (max-width: 1200px) {
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 576px) {
     .certifications-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .certifications-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1.5rem;
     }
 }
 
-@media (max-width: 992px) {
-    .contact-content {
-        grid-template-columns: 1fr;
+@media (min-width: 1200px) {
+    .certifications-container {
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* About section responsiveness */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
     .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    .hero-title1 {
-        font-size: 3rem;
-    }
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-    /* Modal improvements */
-    .modal-content {
-        width: 90%;
-        padding: 1.5rem;
-    }
-    .modal-images {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        text-align: left;
+        align-items: center;
     }
 }
 
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+.profile-img {
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .profile-img {
+        max-width: 300px;
     }
-    .certifications-container {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .profile-img {
+        max-width: 100%;
     }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+}
+
+/* Contact section responsiveness */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
+}
+
+.contact-icon {
+    margin-left: 0;
+    margin-top: 1rem;
+}
+
+.contact-links {
+    margin-left: 0;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .contact-icon {
+        margin-left: 1.5rem;
+        margin-top: 2rem;
+    }
+    .contact-links {
+        margin-left: 1.5rem;
+        margin-top: 6rem;
+        justify-content: flex-start;
+    }
+}
+
+.contact-form {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        margin-right: 2rem;
+    }
+}
+
+.form-control {
+    margin-right: 0;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .form-control {
+        margin-right: 2.5rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Experience section responsiveness */
+.experience-item {
+    width: 280px;
+    padding: 15px;
+    font-size: 0.9rem;
+    left: 20px;
+    right: auto;
+}
+
+.experience-item.right {
+    left: auto;
+    right: 20px;
+}
+
+@media (min-width: 576px) {
     .experience-item {
-        width: 220px;
-        padding: 15px;
+        width: 300px;
+        padding: 18px;
+        left: 40px;
     }
+    .experience-item.right {
+        right: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .experience-item {
+        width: 300px;
+        padding: 20px;
+        left: 60px;
+    }
+    .experience-item.right {
+        right: 60px;
+    }
+}
+
+.experience-title {
+    font-size: 16px;
+}
+
+.experience-date {
+    font-size: 12px;
+}
+
+.experience-description {
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .experience-title {
+        font-size: 17px;
+    }
+    .experience-date {
+        font-size: 13px;
+    }
+    .experience-description {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    .experience-title {
+        font-size: 18px;
+    }
+    .experience-date {
+        font-size: 14px;
+    }
+    .experience-description {
+        font-size: 14px;
+    }
+}
+
+.robot-container {
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 576px) {
     .robot-container {
         width: 60px;
         height: 60px;
     }
-    /* Dock responsiveness */
-    .dock {
-        padding: 8.4px 13.65px 12.6px 13.65px;
-        border-radius: 17.85px;
-    }
-    .dock-item {
-        width: 39.9px;
-        height: 39.9px;
-        border-radius: 12.6px;
-        margin: 0 5.25px;
-    }
-    .dock-item i {
-        font-size: 17.85px;
-    }
-    .hero-title {
-        font-size: 3rem;
-        line-height: 1.1;
-    }
-    .hero-title1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    /* Button responsiveness */
-    .btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    /* Form responsiveness */
-    .form-control {
-        padding: 0.8rem;
-        font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .robot-container {
+        width: 70px;
+        height: 70px;
     }
 }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2.5rem;
+.content {
+    min-height: 600px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .content {
+        min-height: 800px;
+        height: 1150px;
     }
-    .hero-title1 {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    /* Navigation improvements */
-    .dock-container {
-        bottom: 10px;
-    }
+}
+
+/* Dock responsiveness */
+.dock-container {
+    bottom: 10px;
+}
+
+.dock {
+    padding: 6px 10px 8px 10px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    max-width: 90vw;
+}
+
+.dock-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    margin: 2px 3px;
+}
+
+.dock-item i {
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
     .dock {
-        padding: 6px 10px 8px 10px;
-        border-radius: 15px;
+        padding: 7px 12px 9px 12px;
+        border-radius: 18px;
+        flex-wrap: nowrap;
     }
     .dock-item {
-        width: 35px;
-        height: 35px;
-        border-radius: 10px;
-        margin: 0 3px;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        margin: 0 4px;
     }
     .dock-item i {
         font-size: 16px;
     }
-    /* Modal improvements for mobile */
-    .modal-content {
-        padding: 1.5rem;
-        width: 95%;
-        max-height: 90vh;
+}
+
+@media (min-width: 768px) {
+    .dock-container {
+        bottom: 14px;
     }
-    /* Contact section improvements */
-    .contact-content {
+    .dock {
+        padding: 7.35px 12.6px 9.45px 14.7px;
+        border-radius: 22.05px;
+    }
+    .dock-item {
+        width: 40.3px;
+        height: 40.3px;
+        border-radius: 15.75px;
+        margin: 0 6.3px;
+    }
+    .dock-item i {
+        font-size: 17.6px;
+    }
+}
+
+/* Modal responsiveness */
+.modal-content {
+    width: 95%;
+    max-width: 95vw;
+    max-height: 90vh;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+@media (min-width: 576px) {
+    .modal-content {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        width: 85%;
+        max-width: 900px;
+        padding: 2rem;
+    }
+}
+
+.modal-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .modal-images {
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-    .contact-icon {
-        margin-left: 0;
-        margin-top: 1rem;
+}
+
+/* Button responsiveness */
+.btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    width: auto;
+}
+
+@media (min-width: 576px) {
+    .btn {
+        padding: 0.8rem 1.1rem;
+        font-size: 0.9rem;
     }
-    .contact-links {
-        margin-left: 0;
-        margin-top: 3rem;
-        justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
     }
-    .contact-form {
-        margin-right: 0;
-    }
-    .form-control {
-        margin-right: 0;
-        padding: 0.7rem;
-    }
-    /* Certificate section improvements */
+}
+
+/* Certificate section improvements */
+.cert-logo {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.cert-info h2 {
+    font-size: 14px;
+}
+
+.cert-info p {
+    font-size: 11px;
+}
+
+@media (min-width: 576px) {
     .cert-logo {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
     }
     .cert-info h2 {
         font-size: 16px;
     }
     .cert-info p {
-        font-size: 12px;
-    }
-    /* Terminal improvements */
-    .terminal-content {
-        padding: 15px;
-    }
-    .view-button {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    /* About section improvements */
-    .profile-img {
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    .about-text {
-        text-align: left;
-        margin-top: 1rem;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+@media (min-width: 768px) {
+    .cert-logo {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
     }
-    .hero-title1 {
-        font-size: 1.6rem;
+    .cert-info h2 {
+        font-size: 18px;
     }
-    .hero-subtitle {
-        font-size: 1rem;
+    .cert-info p {
+        font-size: 14px;
     }
-    .btn {
-        padding: 0.7rem 0.9rem;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+}
+
+/* Terminal improvements */
+.terminal-content {
+    padding: 12px;
+}
+
+@media (min-width: 576px) {
+    .terminal-content {
+        padding: 16px;
     }
-    /* Experience section improvements */
-    .experience-item {
-        width: 200px;
-        padding: 12px;
-        font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .terminal-content {
+        padding: 20px;
     }
-    .experience-title {
-        font-size: 16px;
-    }
-    .experience-date {
+}
+
+.view-button {
+    padding: 6px 12px;
+    font-size: 11px;
+}
+
+@media (min-width: 576px) {
+    .view-button {
+        padding: 7px 14px;
         font-size: 12px;
     }
-    .experience-description {
-        font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .view-button {
+        padding: 8px 16px;
+        font-size: 14px;
     }
-    /* Section spacing */
-    section {
-        padding: 3rem 0 4rem;
-    }
-    /* Loading screen improvements */
-    .hello {
-        font-size: 2.5rem;
-    }
-    /* Profile image improvements */
-    .profile-img {
-        max-width: 200px;
-    }
-    /* Skills section improvements */
-    .skills-header i {
-        font-size: 1.5rem;
-    }
-    .skills-header h3 {
-        font-size: 1.2rem;
-    }
-    /* Window improvements */
+}
+
+/* Window improvements */
+.window-content {
+    padding: 1rem;
+}
+
+@media (min-width: 576px) {
     .window-content {
-        padding: 1rem;
+        padding: 1.2rem;
     }
+}
+
+@media (min-width: 768px) {
+    .window-content {
+        padding: 1.5rem;
+    }
+}
+
+.window-title {
+    font-size: 0.6rem;
+}
+
+@media (min-width: 576px) {
     .window-title {
         font-size: 0.7rem;
     }
 }
 
+@media (min-width: 768px) {
+    .window-title {
+        font-size: 0.8rem;
+    }
+}
+
+/* Skills section improvements */
+.skills-header i {
+    font-size: 1.3rem;
+}
+
+.skills-header h3 {
+    font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+    .skills-header i {
+        font-size: 1.6rem;
+    }
+    .skills-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .skills-header i {
+        font-size: 2rem;
+    }
+    .skills-header h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Project card improvements */
+.project-img {
+    height: 150px;
+}
+
+@media (min-width: 576px) {
+    .project-img {
+        height: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-img {
+        height: 180px;
+    }
+}
+
+.project-info h3 {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 576px) {
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+}
+
+@media (min-width: 576px) {
+    .project-tag {
+        font-size: 0.75rem;
+        padding: 0.18rem 0.55rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-tag {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+/* Loading screen improvements */
+.hello {
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .hello {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hello {
+        font-size: 4rem;
+    }
+}
+
+/* Spline background responsiveness */
+.spline-background {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .spline-background {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -20%;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+/* Blob effects responsiveness */
+.blob {
+    width: 200px;
+    height: 200px;
+    filter: blur(40px);
+}
+
+@media (min-width: 576px) {
+    .blob {
+        width: 300px;
+        height: 300px;
+        filter: blur(60px);
+    }
+}
+
+@media (min-width: 768px) {
+    .blob {
+        width: 400px;
+        height: 400px;
+        filter: blur(80px);
+    }
+}
+
+.morph-blob {
+    width: 150px;
+    height: 150px;
+    filter: blur(8px);
+}
+
+@media (min-width: 576px) {
+    .morph-blob {
+        width: 200px;
+        height: 200px;
+        filter: blur(9px);
+    }
+}
+
+@media (min-width: 768px) {
+    .morph-blob {
+        width: 300px;
+        height: 300px;
+        filter: blur(10px);
+    }
+}
 
 /* Landscape orientation improvements for mobile */
-
 @media (max-height: 500px) and (orientation: landscape) {
-    .hero-title1 {
-        font-size: 1.8rem;
-    }
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    .hero-subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
     section {
         padding: 2rem 0 3rem;
+        min-height: auto;
     }
     .dock-container {
         bottom: 5px;
     }
+    .hero-title1 {
+        font-size: 1.5rem !important;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    .btn-animated {
+        padding: 8px 16px !important;
+        font-size: 0.8rem !important;
+    }
 }
 
-
 /* High DPI display improvements */
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .slide-image {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-    .project-img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .slide-image,
+    .project-img,
     .profile-img {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .dock-item:hover {
+        transform: none;
+    }
+    
+    .dock-item:active {
+        transform: scale(0.95);
+    }
+    
+    .project-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .dock-container,
+    .section-transition,
+    .loading-screen {
+        display: none !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        min-height: auto;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
     }
 }

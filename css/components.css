@@ -189,18 +189,34 @@
 
 .modal-content {
     position: relative;
-    width: 85%;
-    max-width: 900px;
-    max-height: 85vh;
+    width: 95%;
+    max-width: 95vw;
+    max-height: 90vh;
     overflow-y: auto;
     background: rgba(28, 28, 30, 0.85);
     border-radius: 16px;
     box-shadow: 0 20px 80px rgba(242, 233, 233, 0.3), 0 8px 20px rgba(55, 141, 191, 0.2), inset 0 0 0 1px rgba(142, 58, 58, 0.717);
-    padding: 2rem;
+    padding: 1rem;
     color: #f5f5f7;
     backdrop-filter: blur(20px);
     transform-origin: center;
     animation: modal-content-appear 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (min-width: 576px) {
+    .modal-content {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        width: 85%;
+        max-width: 900px;
+        max-height: 85vh;
+        padding: 2rem;
+    }
 }
 
 .modal-close {
@@ -238,6 +254,14 @@
     margin-bottom: 2rem;
     border-radius: 12px;
     overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .modal-images {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .modal-img {
@@ -283,9 +307,17 @@
     max-width: 600px;
     border-radius: 12px;
     overflow: auto;
+    max-height: 90vh;
     transform: scale(0.8) translateY(30px);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .certificate-modal {
+        width: 95%;
+        max-width: 95vw;
+    }
 }
 
 .modal-overlay.active .certificate-modal {
@@ -316,6 +348,17 @@
 
 .close-button:hover {
     color: #fff;
+}
+
+/* Terminal window responsiveness */
+.terminal-window {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .terminal-window {
+        max-width: 380px;
+    }
 }
 
 
@@ -365,6 +408,19 @@
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 10px 27px rgba(0, 0, 0, 0.5), 0 6px 17px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.6), inset 0 -2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.8);
     overflow: hidden;
     backdrop-filter: blur(21px);
+}
+
+@media (max-width: 767px) {
+    .dock-item {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 0 3px;
+    }
+    
+    .dock-item i {
+        font-size: 14px;
+    }
 }
 
 .dock-item.active {
@@ -418,6 +474,14 @@
     letter-spacing: 0.3px;
 }
 
+@media (max-width: 767px) {
+    .dock-item .tooltip {
+        font-size: 7px;
+        padding: 5px 8px;
+        border-radius: 6px;
+    }
+}
+
 .dock-item:hover .tooltip {
     opacity: 1;
     visibility: visible;
@@ -467,6 +531,16 @@
     white-space: nowrap;
     pointer-events: none;
     z-index: 1002;
+}
+
+@media (max-width: 767px) {
+    .section-display {
+        font-size: 12px;
+        padding: 10px 16px;
+        border-radius: 12px;
+        min-width: 80px;
+        top: -60px;
+    }
 }
 
 .section-display.show {
