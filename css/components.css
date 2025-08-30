@@ -7,10 +7,11 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     margin-bottom: 2rem;
+    transform: scale(0.9);
 }
 
 .mac-window:hover {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
@@ -344,22 +345,22 @@
     box-shadow: 0 40px 81px -14px rgba(0, 0, 0, 0.95), 0 27px 54px -10px rgba(0, 0, 0, 0.8), 0 14px 27px -6px rgba(0, 0, 0, 0.6), 0 7px 14px -2px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.4), inset 0 -2px 6px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 40px rgba(59, 130, 246, 0.15);
     position: relative;
     overflow: visible;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .dock-item {
     position: relative;
     margin: 0 6.3px;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: bottom center;
     will-change: transform;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50.4px;
-    height: 50.4px;
+    width: 40.3px;
+    height: 40.3px;
     border-radius: 15.75px;
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 10px 27px rgba(0, 0, 0, 0.5), 0 6px 17px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.6), inset 0 -2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.8);
     overflow: hidden;
@@ -372,12 +373,12 @@
 }
 
 .dock-item i {
-    font-size: 22.05px;
+    font-size: 17.6px;
     color: rgba(255, 255, 255, 0.95);
     z-index: 1;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2);
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .running-indicator {

@@ -1,12 +1,12 @@
 /* Research Section */
 
 .research-item {
-    margin-bottom: 3rem;
-    transition: transform 0.3s;
+    margin-bottom: 1rem;
+    transition: transform 1s;
 }
 
 .research-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
 }
 
 .research-meta {
